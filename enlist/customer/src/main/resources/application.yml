@@ -1,0 +1,6 @@
+server:
+  port: 5480
+
+spring:
+  application:
+    name: customer-service
