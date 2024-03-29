@@ -29,14 +29,11 @@ Next, we’ll modify our pm.xml file to create both dependency management for sh
   <artifactId>enlist</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>enlist</name>
-
   <url>https://www.corvus.com</url>
-
   <properties>
     <java.version>22</java.version>
     <spring.boot.maven.plugin.version>3.2.4</spring.boot.maven.plugin.version>
   </properties>
-
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -60,46 +57,38 @@ Next, we’ll modify our pm.xml file to create both dependency management for sh
       <artifactId>lombok</artifactId>
       <version>1.18.32</version>
     </dependency>
-
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <version>3.2.4</version>
     </dependency>
-
     <dependency>
       <groupId>org.modelmapper</groupId>
       <artifactId>modelmapper</artifactId>
       <version>3.1.1</version>
     </dependency>
-
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.14.0</version>
     </dependency>
-
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <version>1.5.3</version>
     </dependency>
-
     <dependency>
       <groupId>org.hibernate.validator</groupId>
       <artifactId>hibernate-validator</artifactId>
       <version>8.0.1.Final</version>
     </dependency>
-
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
       <scope>runtime</scope>
       <version>42.6.2</version>
     </dependency>
-
   </dependencies>
-
   <build>
     <pluginManagement>
       <plugins>
@@ -114,7 +103,6 @@ Next, we’ll modify our pm.xml file to create both dependency management for sh
 
 </project>
 ````
-
 ## Creating Microservices
 Next, we’ll create our microservices starting with the customer microservices. Right click the enlist project, choose New and Module. 
 
@@ -140,14 +128,10 @@ Next, we need to add the dependency for spring-boot-starter-web for the customer
         <groupId>com.enlist</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>customer</artifactId>
-
     <name>customer</name>
     <url>http://maven.apache.org</url>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -157,10 +141,8 @@ Next, we need to add the dependency for spring-boot-starter-web for the customer
     </dependencies>
 </project>
 ````
-
 ## Creating Customer Service Classes
 First we will add a new package in the java package of the customer service called com.enlist.customer and in there we’ll create our CustomerApplication class that contains the main method
-
 ![Create Service](service_pom_02.png)
 
 In our resource folder, we will add the application.yml file, however you can use properties for configurations if i t serves you better. Right click the resource folder and choose New >> File and add that file name. Set the details of the file to:
@@ -173,29 +155,20 @@ spring:
     name: customer-service
 ````
 Mind the indentation so the file does not have errors.
-
 ## Create Banner for your service
 In addition, we will add a spring boot banner file in the resource folder. So again, right click the resource folder and choose New >> File and add a banner.txt file.
 Open Google and search for ‘create spring boot banner’ and click on ‘spring boot banner’ generator’. Generate banner by filling in details
-
 ![Banner](banner.png)
-
 Copy everything and page in your banner file
 ![Banner](banner_02.png)
-
 Run the customer service and you will see in the Run window this:
-
 ![Banner](banner_03.png)
-
 ## Creating Models
 Models representing customer entities are defined within the microservice package.
-
 ## Creating Request Objects
 Request objects are created to handle various types of customer requests.
-
 ## Creating Customer Service
 A service class is implemented to handle customer-related operations.
-
 ## Creating Controllers
 Controllers are added to handle HTTP requests for customer and affiliation functionalities.
 
