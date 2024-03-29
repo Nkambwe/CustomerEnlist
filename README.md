@@ -5,9 +5,13 @@ This project serves as a comprehensive guide to building microservices leveragin
 The project is a customer enlisting service and includes services that capture required documents for enlisting and the organization that they are affliated to. The two services are aggregated to a single service called UIFeed that connects the clients to the microservices
 ## Creating the project
 We start by creating the root project for our project. We'll be creating a Maven project using the IntelliJ IDE
+
 ![Create Project](create_project.png)
+
 This will create a root project for our so let it install the dependencies required. Once we’re done, our project structure will look like this:
+
 ![Create Project](create_project_02.png)
+
 Since this is our root project, we do not need the src folder so we need to delete it out
 ## Modifying Project Configuration
 Next, we’ll modify our pm.xml file to create both dependency management for shared dependencies in all our microservices from the root project and also include other dependencies that each microservice will have in their pom.xml file, So we modify the pom.xml file to look like this:
