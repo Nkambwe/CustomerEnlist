@@ -101,13 +101,21 @@ Next, we’ll modify our pm.xml file to create both dependency management for sh
 ````
 ## Creating Microservices
 Next, we’ll create our microservices starting with the customer microservices. Right click the enlist project, choose New and Module. 
+
 ![Create Service](create_service_01.png)
+
 We’ll create a customer service with these details
+
 ![Create Service](create_service_02.png)
+
 Click, Next and leave the Maven version the same. Do not add any dependencies. Click create to add the project
+
 ![Create Service](create_service_03.png)
+
 In our project root pom.xml file a new module node is added with the customer service name
+
 ![Create Service](service_pom_01.png)
+
 Next, we need to add the dependency for spring-boot-starter-web for the customer service
 ````
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -132,7 +140,9 @@ Next, we need to add the dependency for spring-boot-starter-web for the customer
 ````
 ## Creating Customer Service Classes
 First we will add a new package in the java package of the customer service called com.enlist.customer and in there we’ll create our CustomerApplication class that contains the main method
+
 ![Create Service](service_pom_02.png)
+
 In our resource folder, we will add the application.yml file, however you can use properties for configurations if i t serves you better. Right click the resource folder and choose New >> File and add that file name. Set the details of the file to:
 ````
 server:
@@ -146,11 +156,17 @@ Mind the indentation so the file does not have errors.
 ## Create Banner for your service
 In addition, we will add a spring boot banner file in the resource folder. So again, right click the resource folder and choose New >> File and add a banner.txt file.
 Open Google and search for ‘create spring boot banner’ and click on ‘spring boot banner’ generator’. Generate banner by filling in details
+
 ![Banner](banner.png)
+
 Copy everything and page in your banner file
+
 ![Banner](banner_02.png)
+
 Run the customer service and you will see in the Run window this:
+
 ![Banner](banner_03.png)
+
 ## Creating Models
 Next, we want to create the models for our customer service. We will create a new package called com.enlist.customer.models and in there we’ll create our Customer entities with their inheritances.
 
