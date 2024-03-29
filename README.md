@@ -8,7 +8,7 @@ The project is a customer enlisting service and includes services that capture r
 
 ## Creating the project
 We start by creating the root project for our project. We'll be creating a Maven project using the IntelliJ IDE
-![Create Project](images/create_project.png)
+![Create Project](create_project.png)
 
 ## Modifying Project Configuration
 The root `pom.xml` file is modified to manage dependencies for shared dependencies among microservices and include dependencies specific to each microservice.
