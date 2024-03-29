@@ -4,10 +4,11 @@
 This project serves as a comprehensive guide to building microservices leveraging cutting-edge frameworks. Embracing the Aggregator design pattern, it provides an insightful exploration into modern microservices architecture. Key topics covered include containerization with Docker, seamless service discovery implementation, robust integration of message queues using RabbitMQ, alongside a myriad of other essential microservices paradigms.
 
 ## Project Overview
-The project focuses on developing microservices using Spring Boot and Maven archetype project setup. It involves creating a root project with Maven dependencies and then creating individual microservices. Each microservice is designed to handle specific functionalities related to customer enlistment.
+The project is a customer enlisting service and includes services that capture required documents for enlisting and the organization that they are affliated to. The two services are aggregated to a single service called UIFeed that connects the clients to the microservices
 
-## Project Structure
-
+## Creating the project
+We start by creating the root project for our project. We'll be creating a Maven project using the IntelliJ IDE
+![Create Project](images/create_project.png)
 
 ## Modifying Project Configuration
 The root `pom.xml` file is modified to manage dependencies for shared dependencies among microservices and include dependencies specific to each microservice.
