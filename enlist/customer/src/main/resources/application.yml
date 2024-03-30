@@ -1,6 +1,22 @@
 server:
   port: 5480
+  servlet:
+    context-path: /enlist
 
 spring:
   application:
     name: customer-service
+  datasource:
+    username: 'postgres'
+    url: jdbc:postgresql://localhost:5432/enlist_db
+    driver-class-name: org.postgresql.Driver
+    password: 'skylite=2011'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
